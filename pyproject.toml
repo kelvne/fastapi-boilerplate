@@ -1,0 +1,32 @@
+[project]
+name = "fastapi-boilerplate"
+version = "1.0.0"
+description = "A simple boilerplate for an async FastAPI application"
+authors = [{ name = "Kelvne Pechim", email = "kelvne@pech.im" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi[standard] (>=0.115.6,<0.116.0)",
+  "mypy (>=1.14.1,<2.0.0)",
+  "uvicorn[standard] (>=0.34.0,<0.35.0)",
+  "alembic (>=1.14.0,<2.0.0)",
+  "pydantic-settings (>=2.7.1,<3.0.0)",
+  "sqlmodel (>=0.0.22,<0.0.23)",
+  "python-dotenv (>=1.0.1,<2.0.0)",
+  "psycopg2 (>=2.9.10,<3.0.0)",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
+
+[tool.mypy]
+python_version = "3.11"
+disallow_untyped_defs = true
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311"]
